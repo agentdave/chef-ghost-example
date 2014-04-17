@@ -4,7 +4,7 @@ This contains several examples of using chef-solo to install a ghost blog (see: 
 
 Apache2 is used as a front-end web server. PM2 is used to manage the nodejs processes. The recipe sets both of these up as well.
 
-Note that the ghost blog that this example sets up does not use SSL for the admin section and login page. Because of this, you should not use it to run a ghost blog that you actually want to use, as it will be pretty easy for anyone sniffing network traffic to get your username password. SSL is not that hard to add to it and may be added in a future version, but right now, this cookbook is being used mainly to demonstrate Chef and I didn't want to complicate it needlessly (Demo's tomorrow... Sheesh! Talk about last minute!).
+Note that the ghost blog that this example sets up **DOES NOT** use SSL for the admin section and login pages. Because of this, you should not use it to create a ghost blog that you actually want to use (unless you intend to add in SSL handling on your own), as it will be pretty easy for anyone sniffing network traffic to get your username and password. SSL is not that hard to add to the cookbook and may be added in a future version, but right now, this cookbook is being used mainly to demonstrate Chef and I didn't want to complicate it needlessly (Demo's tomorrow... Sheesh! Talk about last minute!).
 
 Requirements
 ------------
