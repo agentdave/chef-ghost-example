@@ -1,0 +1,12 @@
+<VirtualHost *:80>
+	ServerName <%= @site_domain %>
+	ServerAlias www.<%= @site_domain %>
+
+	DocumentRoot <%= @site_home %>
+
+	ErrorLog  <%= @site_home %>/log/apache-error.log
+	CustomLog <%= @site_home %>/log/apache-access.log combined
+
+	ProxyPreserveHost on
+	ProxyPass / http://localhost:<%= @host_port %>/
+</VirtualHost>
