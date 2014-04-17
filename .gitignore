@@ -1,0 +1,7 @@
+/cookbooks/
+/.chef/
+/Berksfile
+/data_bags/
+/environments/
+/nodes/
+/roles/
