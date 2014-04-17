@@ -106,7 +106,7 @@ template "/etc/apache2/sites-available/site-one.com.conf" do
 		:host_port => 2368,
 		:host_url => "http://site-one.com"
 	)
-	notifies :reload, "service[apache2]"
+	notifies :restart, "service[apache2]"
 end
 
 apache_site "site-one.com.conf"
