@@ -1,0 +1,1 @@
+site-cookbooks/ghost-example/README.md
