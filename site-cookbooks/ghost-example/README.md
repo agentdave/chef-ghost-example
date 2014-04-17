@@ -13,7 +13,13 @@ This cookbook assumes you are running Ubuntu 13.10 or later
 
 Attributes
 ----------
-TODO: List your cookbook attributes here.
+* `node['ghost']['sites']` - A hash in the following format, used to specify ghost sites for the ghost-example::rev3 recipe to build. Each value in the sites hash should be in the following structure:
+```json
+{
+    "site-domain.com": { "port": 5555 }
+}
+```
+See below for full examples of specifying these sites in a json file for chef-solo.
 
 Usage
 -----
@@ -26,7 +32,7 @@ pre-requisites:
 
 Steps:
 
-```
+```bash
 cd /PATH/TO/REPO_DIRECTORY
 knife solo init .
 knife solo prepare USERNAME@SERVER_ADDRESS -r "recipe[ghost-example::rev1]"
@@ -37,7 +43,7 @@ To move on to the other examples, edit the node data that will now be (after the
 
 The re-run:
 
-```
+```bash
 knife solo cook USERNAME@SERVER_ADDRESS
 ```
 
