@@ -1,6 +1,7 @@
 /cookbooks/
 /.chef/
 /Berksfile
+/Berksfile.lock
 /data_bags/
 /environments/
 /nodes/

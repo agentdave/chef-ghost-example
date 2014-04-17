@@ -57,7 +57,7 @@ define :ghost_site, :enable => true do
 			:host_port => params[:port],
 			:host_url => "http://#{params[:name]}"
 		)
-		notifies :reload, "service[apache2]"
+		notifies :restart, "service[apache2]"
 	end
 
 	apache_site "#{params[:name]}.conf"
